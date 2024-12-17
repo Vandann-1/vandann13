@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Pallu!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .content {
+            text-align: center;
+            position: relative;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .surprise-btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #000;
+            background: #ffcc00;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .surprise-btn:hover {
+            transform: scale(1.1);
+            background: #ffe066;
+        }
+
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .background-animation span {
+            position: absolute;
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 204, 0, 0.6);
+            border-radius: 50%;
+            animation: float 10s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .cake {
+            margin: 30px auto;
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(to top, #ff6f61, #ff9a9e);
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cake::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 50px;
+            background: #ffeb3b;
+            border-radius: 5px;
+        }
+
+        .cake::after {
+            content: '';
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 25px;
+            background: #fff;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation">
+        <span style="left: 10%; animation-delay: 0s; animation-duration: 12s;"></span>
+        <span style="left: 20%; animation-delay: 2s; animation-duration: 10s;"></span>
+        <span style="left: 40%; animation-delay: 4s; animation-duration: 14s;"></span>
+        <span style="left: 60%; animation-delay: 6s; animation-duration: 11s;"></span>
+        <span style="left: 80%; animation-delay: 8s; animation-duration: 13s;"></span>
+        <span style="left: 90%; animation-delay: 3s; animation-duration: 9s;"></span>
+    </div>
+
+    <div class="content">
+        <h1>Happy Birthday Pallu! 🎉</h1>
+        <p>
+            Wish you many many happy returns of the day Mera palluuu
+            Here's to the sweetest and most lovely person I've ever met. I'm sending you positive energy and tonnes of love. May bappa keep you safe from any harm that comes your way. All of the colours in my life have become more vivid since you entered my life. You brought colour and light into my dark life. You make me feel better when I'm down. You make me feel alive while I'm bored. You aren't just my partner, you are the centre of my universe. Thank you for being so supportive of me. The only person that can make me be this happy. The only person who deserves to be joyful on this day, and may it be the happiest day of your life. I wish you a day full of happiness and smiles, as well as a year full of fantastic experiences.!! I'm grateful that you've entered my life....❤🌍✨🫶🏼You make the world brighter with your smile! Today, we celebrate *you*! 🎂✨</p>
+        <div class="cake"></div>
+        <button class="surprise-btn" onclick="revealSurprise()">🎁 Click for a Surprise 🎁</button>
+    </div>
+
+    <script>
+        function revealSurprise() {
+            window.location.href = 'surprise.html';
+        }
+    </script>
+</body>
+</html>
